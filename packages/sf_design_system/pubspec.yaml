@@ -1,0 +1,13 @@
+name: sf_design_system
+description: SoundFlow Design System (Material You 3+)
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dynamic_color: ^1.7.0
+  google_fonts: ^6.2.1
