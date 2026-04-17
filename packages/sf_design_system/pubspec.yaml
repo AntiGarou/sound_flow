@@ -9,6 +9,5 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # Downgraded to 1.6.8 to avoid toARGB32() error in Flutter 3.24
-  dynamic_color: 1.6.8
+  dynamic_color: ^1.8.1
   google_fonts: ^6.2.1

@@ -24,7 +24,8 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          flutter-version: '3.24.0'
+          # Removed hardcoded flutter-version to use the absolute latest stable (3.29+)
+          # This resolves the Color.toARGB32() missing method error.
 
       - name: Generate Android Platform Files
         run: |
