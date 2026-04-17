@@ -13,7 +13,8 @@ dependencies:
     path: ../../packages/sf_core
   sf_design_system:
     path: ../../packages/sf_design_system
-  dynamic_color: ^1.7.0
+  # Downgraded to 1.6.8 to avoid toARGB32() error in Flutter 3.24
+  dynamic_color: 1.6.8
   go_router: ^14.2.0
   flutter_riverpod: ^2.5.1
 
