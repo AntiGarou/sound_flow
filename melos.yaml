@@ -1,0 +1,32 @@
+name: soundflow
+
+packages:
+  - apps/**
+  - packages/**
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    run: melos exec -c 1 -- "dart analyze ."
+    description: Run dart analyze for all packages.
+
+  format:
+    run: melos exec -c 1 -- "dart format ."
+    description: Run dart format for all packages.
+
+  test:
+    run: melos exec -c 1 -- "flutter test"
+    select-package:
+      dir-exists: test
+    description: Run flutter test for all packages that have a test directory.
+
+  build_runner:
+    run: melos exec -c 1 --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+    description: Run build_runner for all packages that depend on it.
+
+  clean:
+    run: melos exec -c 1 -- "flutter clean"
+    description: Run flutter clean for all packages.
